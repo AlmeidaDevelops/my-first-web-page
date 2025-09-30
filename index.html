@@ -1,88 +1,168 @@
----
-layout: default
-title: "Almendra's Web Page"
----
+<!DOCTYPE html>
+<html lang="es">
 
-<nav>
-  <ul>
-    <li class="education-button"><a href="#education">Educacion</a></li>
-    <li class="projects-button"><a href="#projects">Proyectos</a></li>
-  </ul>
-</nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Almendra's Web Page</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/js/ProjectCard.js" type="module"></script>
+  <script src="assets/js/NavButton.js" type="module"></script>
+  <script src="assets/js/SectionTitle.js" type="module"></script>
+  <script src="assets/js/SkillCategory.js" type="module"></script>
+  <script src="assets/js/ListBox.js" type="module"></script>
+</head>
 
-<header class="presentation">
-  <div>
-    <h1>Hi, I'm Almendra</h1>
-    <h2>A computer scientist</h2>
-    <h2>and Ruby enjoyer</h2>
-  </div>
-  <div>
-    <img src="{{ '/assets/chapa-tu-ruby.png' | relative_url }}" alt="chapa-tu-ruby">
-  </div>
-</header>
+<body>
+  <nav>
+    <ul>
+      <nav-button text="Education" href="#education" preset="red"></nav-button>
+      <nav-button text="Projects" href="#projects" preset="blue"></nav-button>
+      <nav-button text="Skills" href="#skills" preset="yellow"></nav-button>
+      <nav-button text="Competencies" href="#competencies" preset="purple"></nav-button>
+      <nav-button text="Idioms" href="#idioms" preset="green"></nav-button>
+      <nav-button text="Certifications" href="#certifications" preset="orange"></nav-button>
+    </ul>
+  </nav>
 
-<section class="education" id="education">
-  <h2>My Education</h2>
-  <div class="education-item">
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <h3>Universidad Peruana de Ciencias Aplicadas</h3>
-          </td>
-          <td style="text-align: right;">
-            <p>Mar 2023 - Present</p>
-        </tr>
-        <tr>
-          <td style="text-align: left;">
-            <p>Bachelor of Science in Computer Science</p>
-          </td>
-          <td style="text-align: right;">
-            <p>GPA: 3.82</p>
-          </td>
-        </tr>
-        <tr>
-          <td style="text-align: left;">
-            <p><strong>Relevant courses</strong></p>
-          </td>
-          <td>
-            <p>Honor Scholarship</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <ul>
-              <li>Algorithms and Data Structures</li>
-              <li>Database Design</li>
-              <li>Computer Architecture</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>Discrete Mathematics</li>
-              <li>Computational Mathematics</li>
-              <li>Linear Algebra</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-<section class="projects" id="projects">
-  <h2>My Projects</h2>
-  <article>
-    <h3>Lokay: Local Business Database</h3>
-    <img src="{{ '/assets/chapa-tu-ruby.png' | relative_url }}" alt="placeholder">
+  <header class="presentation">
     <div>
-      <p>A relational database designed to digitally connect entrepreneurs, clients, and volunteers within a local
-        business ecosystem.</p>
-      <p><strong>Technologies used:</strong> SQL Server, T-SQL, ERD</p>
+      <h1>Hi, I'm Almendra</h1>
+      <h2>A computer scientist</h2>
+      <h2>and Ruby enjoyer</h2>
     </div>
     <div>
-      <a href="https://github.com/AlmeidaDevelops/lokay-sql-data-base">Go to Repository</a>
+      <img src="assets/chapa-tu-ruby.png" alt="chapa-tu-ruby">
     </div>
+  </header>
 
-  </article>
+  <section class="education" id="education">
+    <section-title title-text="Education" preset="red"></section-title>
+    <div class="education-item">
+      <table>
+        <tbody>
+          <tr>
+            <td class="table-cell--left">
+              <h3>Universidad Peruana de Ciencias Aplicadas</h3>
+            </td>
+            <td class="table-cell--right">
+              <p>Mar 2023 - Present</p>
+          </tr>
+          <tr>
+            <td class="table-cell--left">
+              <p>Bachelor of Science in Computer Science</p>
+            </td>
+            <td class="table-cell--right">
+              <p>GPA: 3.82</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-cell--left">
+              <p><strong>Relevant courses</strong></p>
+            </td>
+            <td class="table-cell--right">
+              <p>Honor Scholarship</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-cell--left">
+              <ul>
+                <li>Algorithms and Data Structures</li>
+                <li>Database Design</li>
+                <li>Computer Architecture</li>
+              </ul>
+            </td>
+            <td class="table-cell--right">
+              <ul>
+                <li>Discrete Mathematics</li>
+                <li>Computational Mathematics</li>
+                <li>Linear Algebra</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="projects" id="projects">
+    <section-title title-text="Projects" preset="blue"></section-title>
+    <div class="projects-container">
+      <project-card project-title="Lokay: Local Business Database" img-src="assets/chapa-tu-ruby.png"
+        img-alt="Lokay project image" technologies="SQL Server, T-SQL, ERD"
+        link-href="https://github.com/AlmeidaDevelops/lokay-sql-data-base" link-text="Go to Repository">
+        <p>A relational database designed to digitally connect entrepreneurs, clients, and volunteers within a local
+          business ecosystem.</p>
+      </project-card>
 
-</section>
+      <project-card project-title="Procedural Maze Generator" img-src="assets/chapa-tu-ruby.png"
+        img-alt="Procedural Maze Generator project image" technologies="Godot, GDScript"
+        link-href="https://github.com/AlmeidaDevelops/godot-maze-demo" link-text="Go to Repository">
+        <p>A technical demo that implements a recursive backtracking algorithm (Depth-First Search) to procedurally
+          generate mazes.</p>
+      </project-card>
+
+      <project-card project-title="3D Platformer" img-src="assets/chapa-tu-ruby.png"
+        img-alt="3D Platformer project image" technologies="Godot, GDScript"
+        link-href="https://almeidadevelops.github.io/web-3d-platformer" link-text="Go to Demo">
+        <p>A 3D platformer prototype exploring physics, movement in 3D environments, and dynamic camera control (1st/3rd
+          person).</p>
+      </project-card>
+
+      <project-card project-title="Trafic Twist: Hyper-Casual Game" img-src="assets/chapa-tu-ruby.png"
+        img-alt="Trafic Twist project image" technologies="GDevelop, Event-based Visual Logic, PyxelEdit"
+        link-href="https://gd.games/luan_studios/trafic-twist" link-text="Go to Demo">
+        <p>A fast-paced arcade title about dodging traffic, focused on simple controls and addictive gameplay.</p>
+      </project-card>
+    </div>
+  </section>
+  <section class="skills" id="skills">
+    <section-title title-text="My Technical Skills" preset="yellow"></section-title>
+    <div class="skills-container">
+      <skill-category category-title="Programming Languages">
+        <p>Python🥈 · SQL🥈 · C++🥈 · Lua🥈</p>
+      </skill-category>
+      <skill-category category-title="Databases">
+        <p>SQL Server🥈 · MySQL🥈 · PostgreSQL🥈</p>
+      </skill-category>
+      <skill-category category-title="Version Control">
+        <p>Git🥈 · GitHub🥈</p>
+      </skill-category>
+      <skill-category category-title="Operating Systems">
+        <p>Windows🥈 · Linux🥈</p>
+      </skill-category>
+    </div>
+  </section>
+  <section class="competencies" id="competencies">
+    <section-title title-text="Core Competencies" preset="purple"></section-title>
+    <list-box>
+      <ul>
+        <li>Team collaboration and task management</li>
+        <li>Fast learner with adaptability to new tools and languages</li>
+        <li>Clear communication of technical concepts</li>
+      </ul>
+    </list-box>
+  </section>
+  <section class="idioms" id="idioms">
+    <section-title title-text="Idioms" preset="green"></section-title>
+    <list-box>
+      <ul>
+        <li>🇪🇸 Spanish: Native</li>
+        <li>🇺🇸 English: Intermediate-Advanced (B2)</li>
+      </ul>
+    </list-box>
+  </section>
+  <section class="certifications" id="certifications">
+    <section-title title-text="Certifications" preset="orange"></section-title>
+    <list-box>
+      <ul>
+        <li><a href="https://www.coursera.org/account/accomplishments/verify/858DMNC8V3SN">Python for Everybody –
+            University of Michigan (Coursera)</a></li>
+        <li><a href="https://www.coursera.org/account/accomplishments/verify/40AIS7IQKP6T">Excel Skills for Business: Intermediate I – Macquarie University (Coursera)</a></li>
+      </ul>
+    </list-box>
+  </section>
+
+  <footer>
+    <p>Made with 🤍 by Almendra</p>
+  </footer>
+</html>

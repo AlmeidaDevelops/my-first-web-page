@@ -6,15 +6,35 @@
 :root {
     /*fancade colors*/
 
-    --color-beige-light: #ffe3e3;
+    --color-light-beige: #ffe3e3;
+    --color-beige: #ffcab8;
+    --color-dark-beige: #f5aba0;
+
+
+
+    --color-light-pink: #ffb3e4;
+    --color-pink: #ff90ca;
+    --color-dark-pink: #e66ca7;
 
     --color-light-red: #ff9696;
     --color-red: #ff4865;
     --color-dark-red: #bb344d;
 
+    --color-light-orange: #ffa37d;
+    --color-orange: #ff6c50;
+    --color-dark-orange: #c84d3d;
+
     --color-light-green: #abff68;
     --color-green: #3eba49;
     --color-dark-green: #00864a;
+
+    --color-light-yellow: #ffff7d;
+    --color-yellow: #ffc935;
+    --color-dark-yellow: #a07b00;
+
+    --color-light-purple: #e391ff;
+    --color-purple: #c54bff;
+    --color-dark-purple: #8a00d4;
 
     --color-light-blue: #00c2ff;
     --color-blue: #008cff;
@@ -44,24 +64,12 @@
 body {
     font-family: 'Baloo 2';
     font-weight: 800;
-    background-color: var(--color-light-white)
-}
-
-h2 {
-    text-align: left;
-    margin: 2rem auto;
-    padding: 1rem;
-    max-width: 60rem;
-    border-radius: 1rem;
-    background-color: var(--color-light-red);
-    box-shadow: var(--color-red) 0rem 1rem;
-    color: var(--color-dark-red);
+    background-color: var(--color-light-white);
 }
 
 /* ---------------- */
 /* Nav Bar */
 /* ---------------- */
-
 nav {
     display: flex;
     justify-content: center;
@@ -74,30 +82,6 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
-}
-
-.education-button {
-    border-radius: 0.5rem;
-    background-color: var(--color-light-red);
-    box-shadow: var(--color-red) 0rem 0.5rem;
-    padding: 0.5rem;
-}
-.education-button a {
-    color: var(--color-dark-red);
-}
-
-.projects-button {
-    border-radius: 0.5rem;
-    background-color: var(--color-light-blue);
-    box-shadow: var(--color-blue) 0rem 0.5rem;
-    padding: 0.5rem;
-}
-.projects-button a {
-    color: var(--color-dark-blue);
-}
-
-nav ul li a {
-    text-decoration: none;
 }
 
 /* ---------------- */
@@ -124,7 +108,6 @@ nav ul li a {
 }
 
 .presentation h2 {
-    /* Reset styles from general h2 */
     background-color: transparent;
     box-shadow: none;
     padding: 0;
@@ -149,12 +132,6 @@ nav ul li a {
     max-width: 60rem;
 }
 
-.education h2 {
-    background-color: var(--color-light-red);
-    box-shadow: var(--color-red) 0rem 1rem;
-    color: var(--color-dark-red);
-}
-
 .education-item {
     margin-top: 1rem;
     border-radius: 1rem;
@@ -168,16 +145,16 @@ nav ul li a {
 }
 
 .education-item td {
-    padding: -1rem;
+    padding: 1rem;
     vertical-align: top;
     font-weight: 600;
 }
 
-.education-item td:first-child {
+.table-cell--left {
     text-align: left;
 }
 
-.education-item td:last-child {
+.table-cell--right {
     text-align: right;
 }
 
@@ -196,54 +173,42 @@ nav ul li a {
     text-align: left;
 }
 
+/* ---------------- */
+/* Projects */
+/* ---------------- */
 .projects {
     margin: 2rem auto;
     max-width: 60rem;
 }
 
-.projects h2 {
-    background-color: var(--color-light-blue);
-    box-shadow: var(--color-blue) 0rem 1rem;
-    color: var(--color-dark-blue);
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
 }
 
-section.projects article {
-    margin-top: 1rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: var(--color-light-white);
-    box-shadow: inset 0 0 0 0.25rem var(--color-dark-black);
-    max-width: 20rem;
+/* ---------------- */
+/* Skills */
+/* ---------------- */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+    max-width: 60rem;
+    margin: 2rem auto;
 }
 
-section.projects article img {
+.education-item table {
     width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-}
-section.projects article p {
-    font-weight: 600;
-    text-align: justify;
+    border-collapse: collapse;
 }
 
-section.projects article div {
-    align-self: center;
-}
-
-section.projects article a {
-    display: inline-block;
-    margin-top: 1rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: var(--color-light-white);
-    box-shadow: inset 0 0 0 0.25rem var(--color-dark-black);
-    text-decoration: none;
-    color: var(--color-dark-black)
-}
-
-section.projects article div:last-of-type {
+footer {
     text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    background-color: var(--color-light-pink);
+    color: var(--color-dark-pink);
 }
 
 /* ---------------- */
@@ -262,10 +227,10 @@ section.projects article div:last-of-type {
     .education-item td {
         display: block;
         width: 100%;
-        text-align: left !important; /* Important to override inline styles */
     }
 
-    .education-item td:last-child {
-        text-align: left !important; /* Important to override inline styles */
+    .table-cell--left,
+    .table-cell--right {
+        text-align: left;
     }
 }
