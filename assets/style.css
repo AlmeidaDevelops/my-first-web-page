@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+/* ---------------- */
+/* Variables */
+/* ---------------- */
+:root {
+    /*fancade colors*/
+
+    --color-beige-light: #ffe3e3;
+
+    --color-light-red: #ff9696;
+    --color-red: #ff4865;
+    --color-dark-red: #bb344d;
+
+    --color-light-green: #abff68;
+    --color-green: #3eba49;
+    --color-dark-green: #00864a;
+
+    --color-light-blue: #00c2ff;
+    --color-blue: #008cff;
+    --color-dark-blue: #006ad4;
+
+    --color-light-white: #feffff;
+    --color-white: #dde0f0;
+    --color-dark-white: #878ba0;
+
+    --color-light-black: #5b5b76;
+    --color-black: #3c3c50;
+    --color-dark-black: #1a1a25;
+}
+
+/* ---------------- */
+/* Reset */
+/* ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------- */
+/* General */
+/* ---------------- */
+body {
+    font-family: 'Baloo 2';
+    font-weight: 800;
+    background-color: var(--color-light-white)
+}
+
+h2 {
+    text-align: left;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 60rem;
+    border-radius: 1rem;
+    background-color: var(--color-light-red);
+    box-shadow: var(--color-red) 0rem 1rem;
+    color: var(--color-dark-red);
+}
+
+/* ---------------- */
+/* Nav Bar */
+/* ---------------- */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.education-button {
+    border-radius: 0.5rem;
+    background-color: var(--color-light-red);
+    box-shadow: var(--color-red) 0rem 0.5rem;
+    padding: 0.5rem;
+}
+.education-button a {
+    color: var(--color-dark-red);
+}
+
+.projects-button {
+    border-radius: 0.5rem;
+    background-color: var(--color-light-blue);
+    box-shadow: var(--color-blue) 0rem 0.5rem;
+    padding: 0.5rem;
+}
+.projects-button a {
+    color: var(--color-dark-blue);
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+/* ---------------- */
+/* Presentation */
+/* ---------------- */
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-light-green);
+    box-shadow: var(--color-green) 0rem 1rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    max-width: 60rem;
+}
+
+.presentation div {
+    margin: 2rem;
+}
+
+.presentation h1 {
+    text-align: center;
+    color: var(--color-dark-green);
+}
+
+.presentation h2 {
+    /* Reset styles from general h2 */
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0.25rem 0;
+    border-radius: 0;
+    text-align: center;
+    color: var(--color-dark-green);
+}
+
+.presentation img {
+    vertical-align: middle;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+/* ---------------- */
+/* Education */
+/* ---------------- */
+.education {
+    margin: 2rem auto;
+    max-width: 60rem;
+}
+
+.education h2 {
+    background-color: var(--color-light-red);
+    box-shadow: var(--color-red) 0rem 1rem;
+    color: var(--color-dark-red);
+}
+
+.education-item {
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: inset 0 0 0 0.25rem var(--color-dark-black);
+}
+
+.education-item table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.education-item td {
+    padding: -1rem;
+    vertical-align: top;
+    font-weight: 600;
+}
+
+.education-item td:first-child {
+    text-align: left;
+}
+
+.education-item td:last-child {
+    text-align: right;
+}
+
+.education-item h3 {
+    font-weight: 800;
+}
+
+.education-item p {
+    margin: 0;
+}
+
+.education-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.projects {
+    margin: 2rem auto;
+    max-width: 60rem;
+}
+
+.projects h2 {
+    background-color: var(--color-light-blue);
+    box-shadow: var(--color-blue) 0rem 1rem;
+    color: var(--color-dark-blue);
+}
+
+section.projects article {
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--color-light-white);
+    box-shadow: inset 0 0 0 0.25rem var(--color-dark-black);
+    max-width: 20rem;
+}
+
+section.projects article img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+section.projects article p {
+    font-weight: 600;
+    text-align: justify;
+}
+
+section.projects article div {
+    align-self: center;
+}
+
+section.projects article a {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--color-light-white);
+    box-shadow: inset 0 0 0 0.25rem var(--color-dark-black);
+    text-decoration: none;
+    color: var(--color-dark-black)
+}
+
+section.projects article div:last-of-type {
+    text-align: center;
+}
+
+/* ---------------- */
+/* Media Queries */
+/* ---------------- */
+@media (max-width: 45rem) {
+    .presentation {
+        flex-direction: column;
+        margin: 1rem auto;
+    }
+
+    .presentation div {
+        margin: 1rem;
+    }
+
+    .education-item td {
+        display: block;
+        width: 100%;
+        text-align: left !important; /* Important to override inline styles */
+    }
+
+    .education-item td:last-child {
+        text-align: left !important; /* Important to override inline styles */
+    }
+}
